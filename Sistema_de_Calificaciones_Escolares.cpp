@@ -34,9 +34,9 @@ int main() {
             cout << "Ingresa la edad del alumno: ";
             cin >> edad;
 
-            if (edad < 0 || edad > 120) {
-                cout << "Edad invalida" << endl;
-                return 1;
+            while (edad < 0 || edad > 120) {
+                cout << "Edad invalida. Ingresa una edad entre 0 y 120: ";
+                cin >> edad;
             }
 
             cout << "Cuantas calificaciones deseas registrar? ";
@@ -51,9 +51,9 @@ int main() {
                 cout << "Ingresa la calificacion " << i << ": ";
                 cin >> calificacion;
 
-                if (calificacion < 0 || calificacion > 10) {
-                    cout << "Error: la calificacion debe estar entre 0 y 10." << endl;
-                    return 1;
+                while (calificacion < 0 || calificacion > 10) {
+                    cout << "Calificacion invalida. Ingresa una calificacion entre 0 y 10: ";
+                    cin >> calificacion;
                 }
 
                 sumaCalificaciones += calificacion;
